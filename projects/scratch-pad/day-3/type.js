@@ -14,7 +14,7 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    return Array.isArray(value);
+    return Array.isArray(value);  //use Array.isArray to vet array datatype
     
     // YOUR CODE ABOVE HERE //
 }
@@ -52,10 +52,10 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    if(isArray(value) === true || isObject(value) === true) {
-        return true;
+    if(isArray(value) === true || isObject(value) === true) { //using isArray and isObject functions to vet collections
+        return true;    //return true if a collection
     } else {
-        return false;
+        return false;   //return false if not a collection
     }
     // YOUR CODE ABOVE HERE //
 }
@@ -82,23 +82,23 @@ function isCollection(value) {
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     
-     if(Array.isArray(value)) {
+     if(Array.isArray(value)) {     //using Array.isArray to vet if an array
         return 'array';
-    } else if (typeof value === 'string') {
+    } else if (typeof value === 'string') { //using string to vet datatype
         return 'string';
-    } else if (typeof value === 'number') {
+    } else if (typeof value === 'number') { //using number to vet datatype
         return 'number';
-    } else if (typeof value === 'boolean') {
+    } else if (typeof value === 'boolean') { //using boolean to vet datatype
         return 'boolean';
-    } else if (typeof value === 'function') {
+    } else if (typeof value === 'function') {   //using function to vet datatype
         return 'function';
-    } else if (value instanceof Date) {
+    } else if (value instanceof Date) {     //using instanceof Date to vet if Date
         return 'date';
-    } else if (typeof value === 'undefined') {
+    } else if (typeof value === 'undefined') {  //using undefined to vet datatype
         return 'undefined';
-    } else if (value === null) {
+    } else if (value === null) {            //using null to vet datatype
       return 'null';
-    } else if (typeof value === 'object') {
+    } else if (typeof value === 'object') { //using Array.isArray, instanceof Date, and null to vet datatype
         return 'object';
     }
     
