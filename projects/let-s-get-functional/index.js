@@ -3,7 +3,7 @@
 'use strict';
 
 var customers = require('./data/customers.json');
-var _ = require('lodown-deb-opspk');
+var _ = require('lodown-debraopspk');
 
 /**
  * 1. Import your lodown module using the require() method,
@@ -31,9 +31,10 @@ var maleCount = function(array) {
     //return  a condition that resolves to true or false based on the argument
     //test if customer object has a gender property of male
     return customer.gender === 'male';
-    }).length 
+    }).length;
     
 };
+
 
 var femaleCount;
 
