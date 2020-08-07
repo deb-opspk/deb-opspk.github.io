@@ -3,7 +3,7 @@
 'use strict';
 
 var customers = require('./data/customers.json');
-var _ = require(/* Replace this with the name of your lodown! */);
+var _ = require('lodown-deb-opspk');
 
 /**
  * 1. Import your lodown module using the require() method,
@@ -15,14 +15,24 @@ var _ = require(/* Replace this with the name of your lodown! */);
  * 3. We started the first one for you as an example! Make the rest in that style.
  *
  * 4. To test your work, run the following command in your terminal:
- *
- *    npm start --prefix ./<YOUR_GITHUB_FOLDER/projects/let-s-get-functional
+ *  //inside of your github folder
+ *    npm start --prefix ./projects/let-s-get-functional
  *
  *    IMPORTANT: Make sure you replace <YOUR_GITHUB_FOLDER with your actual github folder name that is in your workspace.
  */
 
 var maleCount = function(array) {
-
+    //use filter function to filter male customers
+    //output must be a number
+    //_.filter(array, function(e, i, a){}) 
+    //look for gender, you don't need three param
+    // _.filter(array, function(customer, index, array){}) 
+    return _.filter(array, function(customer){ 
+    //return  a condition that resolves to true or false based on the argument
+    //test if customer object has a gender property of male
+    return customer.gender === 'male';
+    }).length 
+    
 };
 
 var femaleCount;
