@@ -580,6 +580,16 @@ _.reduce = function(array, func, seed) { //create reduce function with array, fu
     
 };
 
+// _.reduce = function(arr, func, seed) {
+//     for (let i = 0; i < arr.length; i++) { //for loop to iterate through the given array
+//         if (seed === undefined){ //if no seed, set the seed as the 
+//             seed = arr[0];  //zero indexed value in array
+//         } else {
+//             seed = func(seed, arr[i], i); //Run the function for each item in indexed array
+//         }   //assign seed the value from the function's actions
+//     }
+//     return seed; //return the final value;
+// }
 
 
 
@@ -601,7 +611,7 @@ _.reduce = function(array, func, seed) { //create reduce function with array, fu
 _.extend = function(object1, ...objects) { //create extend function, ...objects = object2 (or more) parameters;
 //spread syntax (...) permits multiple objects and splits objects into arrays
     for (let i = 0; i < objects.length; i++) { //for loop to vet arrays
-        console.log(i); //printing 0
+        //console.log(i); //printing 0
             for (let keys in objects[i]) { //for in loop to vet objects
                 object1[keys] = objects[i][keys]; //assign object1[keys] to object1[i][keys]
             }
